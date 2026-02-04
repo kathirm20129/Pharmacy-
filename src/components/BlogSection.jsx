@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronsRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const BlogSection = () => {
     // Using placeholders or existing images. 
@@ -36,10 +37,10 @@ const BlogSection = () => {
         <section className="max-w-[1440px] mx-auto px-6 mb-32 font-sans">
             <div className="flex items-baseline gap-6 mb-8">
                 <h2 className="text-[32px] font-extrabold text-[#333]">Health Blog</h2>
-                <a href="#" className="flex items-center gap-1 text-[13px] text-[#25d3af] font-medium hover:underline">
+                <Link to="/blog" className="flex items-center gap-1 text-[13px] text-[#25d3af] font-medium hover:underline">
                     <ChevronsRight className="w-4 h-4" />
                     Latest posts
-                </a>
+                </Link>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

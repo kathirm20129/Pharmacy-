@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
     Pill,
     Zap,
@@ -13,15 +14,15 @@ import {
 
 const Navbar = () => {
     const navItems = [
-        { name: 'Medicines', icon: <Pill className="w-5 h-5" /> },
-        { name: 'Vitamins', icon: <Zap className="w-5 h-5" /> },
-        { name: 'Beauty', icon: <Sparkles className="w-5 h-5" /> },
-        { name: 'Hygiene', icon: <Droplets className="w-5 h-5" /> },
-        { name: 'Lenses', icon: <Eye className="w-5 h-5" /> },
-        { name: 'Mother & Child', icon: <Baby className="w-5 h-5" /> },
-        { name: 'Med Supplies', icon: <BriefcaseMedical className="w-5 h-5" /> },
-        { name: 'Pet Supplies', icon: <Dog className="w-5 h-5" /> },
-        { name: 'Med Equipment', icon: <Stethoscope className="w-5 h-5" /> },
+        { name: 'Medicines', icon: <Pill className="w-5 h-5" />, path: '/medicines' },
+        { name: 'Vitamins', icon: <Zap className="w-5 h-5" />, path: '#' },
+        { name: 'Beauty', icon: <Sparkles className="w-5 h-5" />, path: '#' },
+        { name: 'Hygiene', icon: <Droplets className="w-5 h-5" />, path: '#' },
+        { name: 'Lenses', icon: <Eye className="w-5 h-5" />, path: '#' },
+        { name: 'Mother & Child', icon: <Baby className="w-5 h-5" />, path: '#' },
+        { name: 'Med Supplies', icon: <BriefcaseMedical className="w-5 h-5" />, path: '#' },
+        { name: 'Pet Supplies', icon: <Dog className="w-5 h-5" />, path: '#' },
+        { name: 'Med Equipment', icon: <Stethoscope className="w-5 h-5" />, path: '#' },
     ];
 
     return (
@@ -30,8 +31,8 @@ const Navbar = () => {
                 <ul className="flex items-center justify-between gap-2 overflow-x-auto no-scrollbar">
                     {navItems.map((item, idx) => (
                         <li key={idx} className="flex-shrink-0">
-                            <a
-                                href="#"
+                            <Link
+                                to={item.path}
                                 className="flex items-center gap-2.5 text-white hover:text-white/80 transition-all group"
                             >
                                 <div className="text-white/90 group-hover:scale-110 transition-transform">
@@ -40,7 +41,7 @@ const Navbar = () => {
                                 <span className="text-[11.5px] font-extrabold uppercase tracking-widest whitespace-nowrap">
                                     {item.name}
                                 </span>
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>

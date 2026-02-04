@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, ChevronDown, Menu, Heart, User, Mail, Phone, Search, ShoppingCart, Youtube, Navigation } from 'lucide-react';
+import { Link } from 'react-router-dom';
 const logoImg = '/logo.png';
 
 const Header = () => {
@@ -37,7 +38,7 @@ const Header = () => {
                 <div className="max-w-[1440px] mx-auto px-6 flex flex-row items-center justify-between gap-2">
 
                     {/* Logo Section - Scaled down slightly */}
-                    <div className="flex items-center gap-3 cursor-pointer min-w-fit">
+                    <Link to="/" className="flex items-center gap-3 cursor-pointer min-w-fit">
                         <div className="relative w-9 h-9">
                             <img src={logoImg} alt="Pharmacy Logo" className="w-full h-full object-contain" />
                         </div>
@@ -47,7 +48,7 @@ const Header = () => {
                             </div>
                             <div className="text-[9px] text-gray-300 font-bold uppercase tracking-widest leading-none">Your online health partner</div>
                         </div>
-                    </div>
+                    </Link>
 
                     <div className="flex-1"></div>
 
