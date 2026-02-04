@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, ChevronDown, Menu, Heart, User, Mail, Phone, Search, ShoppingCart, Youtube, Navigation } from 'lucide-react';
+const logoImg = '/logo.png';
 
 const Header = () => {
     return (
@@ -38,10 +39,7 @@ const Header = () => {
                     {/* Logo Section - Scaled down slightly */}
                     <div className="flex items-center gap-3 cursor-pointer min-w-fit">
                         <div className="relative w-9 h-9">
-                            <div className="absolute top-0 left-0 w-7 h-7 bg-[#002d67] rounded-tr-xl rounded-bl-xl rounded-tl-[2px]"></div>
-                            <div className="absolute bottom-0 right-0 w-5 h-5 bg-[#25d3af] rounded-full border-2 border-white shadow-sm flex items-center justify-center">
-                                <div className="w-2 h-0.5 bg-white"></div>
-                            </div>
+                            <img src={logoImg} alt="Pharmacy Logo" className="w-full h-full object-contain" />
                         </div>
                         <div className="flex flex-col">
                             <div className="text-[20px] leading-tight font-extrabold text-[#002d67] tracking-tighter">

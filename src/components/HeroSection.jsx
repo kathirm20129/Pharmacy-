@@ -11,8 +11,8 @@ import {
     MessageSquare,
     ChevronUp
 } from 'lucide-react';
-import toothbrushImg from '../assets/toothbrushs.png';
-import creamImg from '../assets/Nivea.png';
+const toothbrushImg = '/toothbrushs.png';
+const creamImg = '/Nivea.png';
 
 const HeroSection = () => {
     const tags = [
@@ -28,9 +28,9 @@ const HeroSection = () => {
     ];
 
     const products = [
-        { title: 'Nature\'s Bounty Skin, hair, nails, capsules 60 pcs', price: '244', rating: 5 },
-        { title: 'Arbidol® - drug from ARVI and flu, 10 tablets', price: '145', rating: 5 },
-        { title: 'Desmoxan - treatment for smoking cessation, 100 tablets', price: '444', rating: 5 },
+        { title: 'Nature\'s Bounty Skin, hair, nails, capsules 60 pcs', price: '244', rating: 5, src: "https://i.pinimg.com/1200x/cc/97/8a/cc978a39def34d175d1af9926e297d51.jpg" },
+        { title: 'Arbidol® - drug from ARVI and flu, 10 tablets', price: '145', rating: 5, src: "https://i.pinimg.com/736x/8c/95/e7/8c95e70055f77389d5e320a28c6c6763.jpg" },
+        { title: 'Desmoxan - treatment for smoking cessation, 100 tablets', price: '444', rating: 5, src: "https://i.pinimg.com/736x/d6/aa/c7/d6aac737fa7418b8bc98b19dcf65f35c.jpg" },
     ];
 
     return (
@@ -99,14 +99,16 @@ const HeroSection = () => {
                                         HIT
                                     </span>
                                 </div>
-                                <div className="w-14 h-14 bg-gray-100 rounded-lg"></div>
+                                <div className="w-16 h-16 rounded-lg overflow-hidden">
+                                    <img src={p.src} alt={p.title} className="w-full h-full object-contain" />
+                                </div>
                             </div>
                             <div className="flex flex-col flex-1 justify-center">
                                 <h4 className="text-[11px] font-medium text-gray-500 leading-snug mb-2 line-clamp-2">
                                     {p.title}
                                 </h4>
                                 <div className="flex items-center justify-between">
-                                    <span className="text-[14px] font-black text-[#002d67]">{p.price} руб.</span>
+                                    <span className="text-[14px] font-black text-[#002d67]">{p.price} RUB.</span>
                                     <div className="flex items-center gap-0.5">
                                         {[...Array(5)].map((_, i) => (
                                             <Star key={i} className="w-2.5 h-2.5 text-[#ffcc00] fill-[#ffcc00]" />
