@@ -8,19 +8,19 @@ const Header = () => {
         <header className="w-full bg-white font-sans">
             {/* Top Bar - Slimmer padding */}
             <div className="border-b border-gray-50 py-1.5">
-                <div className="max-w-[1440px] mx-auto px-6 flex flex-row justify-between items-center text-[12px] text-gray-400">
-                    <div className="flex items-center gap-8">
-                        <div className="flex items-center cursor-pointer hover:text-brand-teal transition-colors group">
+                <div className="max-w-[1440px] mx-auto px-6 flex flex-col sm:flex-row justify-between items-center text-[12px] text-gray-400 gap-2 sm:gap-0">
+                    <div className="flex items-center gap-4 sm:gap-8 overflow-x-auto w-full sm:w-auto justify-center sm:justify-start">
+                        <div className="flex items-center cursor-pointer hover:text-brand-teal transition-colors group whitespace-nowrap">
                             <Navigation className="w-3.5 h-3.5 mr-1.5 text-brand-teal fill-brand-teal/5 rotate-45" />
                             <span>Location: New York</span>
                             <ChevronDown className="w-3 h-3 ml-1" />
                         </div>
-                        <div className="flex items-center cursor-pointer hover:text-brand-teal transition-colors">
+                        <div className="flex items-center cursor-pointer hover:text-brand-teal transition-colors whitespace-nowrap">
                             <Menu className="w-3.5 h-3.5 mr-1.5 text-brand-teal" />
                             <span>Service Pages</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-6">
+                    <div className="flex items-center gap-6 w-full sm:w-auto justify-center sm:justify-end">
                         <div className="flex items-center cursor-pointer hover:text-brand-teal transition-colors">
                             <span>Favorites</span>
                             <Heart className="w-3.5 h-3.5 ml-2 text-brand-teal" />
@@ -35,10 +35,10 @@ const Header = () => {
 
             {/* Main Header - Reduced vertical padding */}
             <div className="py-4">
-                <div className="max-w-[1440px] mx-auto px-6 flex flex-row items-center justify-between gap-2">
+                <div className="max-w-[1440px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-2">
 
                     {/* Logo Section - Scaled down slightly */}
-                    <Link to="/" className="flex items-center gap-3 cursor-pointer min-w-fit">
+                    <Link to="/" className="flex items-center gap-3 cursor-pointer min-w-fit self-start md:self-center">
                         <div className="relative w-9 h-9">
                             <img src={logoImg} alt="Pharmacy Logo" className="w-full h-full object-contain" />
                         </div>
@@ -50,10 +50,10 @@ const Header = () => {
                         </div>
                     </Link>
 
-                    <div className="flex-1"></div>
+                    <div className="flex-1 hidden md:block"></div>
 
                     {/* Social Circle Links - Meticulously aligned to Figma */}
-                    <div className="flex items-center gap-2">
+                    <div className="hidden lg:flex items-center gap-2">
                         {/* VK Icon */}
                         <div className="w-[34px] h-[34px] rounded-full border border-gray-200 flex items-center justify-center text-[#25d3af] cursor-pointer hover:bg-gray-50 transition-all">
                             <span className="text-[13px] font-black leading-none transform -translate-y-[1px]">vk</span>
@@ -73,7 +73,7 @@ const Header = () => {
                     </div>
 
                     {/* Middle Contact Info Block - Compacted */}
-                    <div className="flex items-center gap-6">
+                    <div className="hidden xl:flex items-center gap-6">
                         <div className="flex items-center cursor-pointer group">
                             <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center mr-2.5 group-hover:bg-[#25d3af]/10 transition-colors">
                                 <Mail className="w-[15px] h-[15px] text-[#25d3af]" />
@@ -106,12 +106,12 @@ const Header = () => {
                     </div>
 
                     {/* Right Action Block - Reduced sizes */}
-                    <div className="flex items-center gap-3 ml-2">
+                    <div className="flex items-center gap-3 ml-0 md:ml-2 w-full md:w-auto justify-end">
                         <button className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center text-[#25d3af] hover:bg-[#25d3af] hover:text-white transition-all">
                             <Search className="w-4 h-4" />
                         </button>
 
-                        <button className="h-10 px-8 bg-[#25d3af] text-white rounded-full font-extrabold text-[11px] uppercase tracking-[0.05em] hover:bg-[#1ebf9e] shadow-md shadow-[#25d3af]/20 transition-all active:scale-95 whitespace-nowrap">
+                        <button className="h-10 px-8 bg-[#25d3af] text-white rounded-full font-extrabold text-[11px] uppercase tracking-[0.05em] hover:bg-[#1ebf9e] shadow-md shadow-[#25d3af]/20 transition-all active:scale-95 whitespace-nowrap flex-1 md:flex-none">
                             Request a call
                         </button>
 

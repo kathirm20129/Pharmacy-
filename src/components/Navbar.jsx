@@ -15,14 +15,14 @@ import {
 const Navbar = () => {
     const navItems = [
         { name: 'Medicines', icon: <Pill className="w-5 h-5" />, path: '/medicines' },
-        { name: 'Vitamins', icon: <Zap className="w-5 h-5" />, path: '#' },
-        { name: 'Beauty', icon: <Sparkles className="w-5 h-5" />, path: '#' },
-        { name: 'Hygiene', icon: <Droplets className="w-5 h-5" />, path: '#' },
-        { name: 'Lenses', icon: <Eye className="w-5 h-5" />, path: '#' },
-        { name: 'Mother & Child', icon: <Baby className="w-5 h-5" />, path: '#' },
-        { name: 'Med Supplies', icon: <BriefcaseMedical className="w-5 h-5" />, path: '#' },
-        { name: 'Pet Supplies', icon: <Dog className="w-5 h-5" />, path: '#' },
-        { name: 'Med Equipment', icon: <Stethoscope className="w-5 h-5" />, path: '#' },
+        { name: 'Vitamins', icon: <Zap className="w-5 h-5" />, path: '/vitamins' },
+        { name: 'Beauty', icon: <Sparkles className="w-5 h-5" />, path: '/beauty' },
+        { name: 'Hygiene', icon: <Droplets className="w-5 h-5" />, path: '/hygiene' },
+        { name: 'Lenses', icon: <Eye className="w-5 h-5" />, path: '/lenses' },
+        { name: 'Mother & Child', icon: <Baby className="w-5 h-5" />, path: '/mother-and-child' },
+        { name: 'Med Supplies', icon: <BriefcaseMedical className="w-5 h-5" />, path: '/vitamins' },
+        { name: 'Pet Supplies', icon: <Dog className="w-5 h-5" />, path: '/beauty' },
+        { name: 'Med Equipment', icon: <Stethoscope className="w-5 h-5" />, path: '/hygiene' },
     ];
 
     return (

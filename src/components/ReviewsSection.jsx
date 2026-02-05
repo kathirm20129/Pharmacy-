@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Star, ChevronRight } from 'lucide-react';
 
 const ReviewsSection = () => {
@@ -82,10 +83,10 @@ const ReviewsSection = () => {
                         ))}
                     </div>
 
-                    <a href="#" className="inline-flex items-center gap-2 mt-8 text-[#25d3af] text-[11px] font-black uppercase tracking-widest hover:text-[#1ebf9e] transition-colors group">
+                    <Link to="/reviews" className="inline-flex items-center gap-2 mt-8 text-[#25d3af] text-[11px] font-black uppercase tracking-widest hover:text-[#1ebf9e] transition-colors group">
                         <ChevronRight className="w-4 h-4" />
                         All 4349 reviews
-                    </a>
+                    </Link>
                 </div>
 
             </div>

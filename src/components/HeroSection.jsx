@@ -50,37 +50,37 @@ const HeroSection = () => {
             </div>
 
             {/* Main Grid - Scaled Down for Precision */}
-            <div className="flex flex-row gap-4 mb-8">
+            <div className="flex flex-col lg:flex-row gap-4 mb-8">
 
                 {/* Oral-B Section - Balanced width */}
-                <div className="flex-[5] bg-white rounded-[1.5rem] p-8 relative flex items-center overflow-hidden border border-gray-50 min-h-[380px]">
-                    <div className="max-w-[280px] relative z-20">
-                        <h2 className="text-[34px] font-extrabold text-[#002d67] leading-[1.1] mb-1 tracking-tight">
+                <div className="flex-[5] bg-white rounded-[1.5rem] p-6 md:p-8 relative flex flex-col md:flex-row items-center overflow-hidden border border-gray-50 min-h-[320px] md:min-h-[380px]">
+                    <div className="w-full md:max-w-[280px] relative z-20 text-center md:text-left mb-6 md:mb-0">
+                        <h2 className="text-[28px] md:text-[34px] font-extrabold text-[#002d67] leading-[1.1] mb-1 tracking-tight">
                             Oral-B vitality
                         </h2>
-                        <h3 className="text-[20px] font-medium text-[#002d67] leading-tight mb-8">
+                        <h3 className="text-[16px] md:text-[20px] font-medium text-[#002d67] leading-tight mb-4 md:mb-8">
                             electric toothbrush
                         </h3>
-                        <p className="text-[#9ca3af] text-[12px] leading-relaxed mb-10 font-medium">
+                        <p className="text-[#9ca3af] text-[11px] md:text-[12px] leading-relaxed mb-6 md:mb-10 font-medium max-w-[280px] mx-auto md:mx-0">
                             Clinically proven that an electric toothbrush cleans the oral cavity more effectively than a regular manual toothbrush.
                         </p>
-                        <button className="bg-[#002d67] text-white px-8 py-3.5 rounded-full font-bold text-[11px] uppercase tracking-widest flex items-center gap-2 hover:opacity-90 transition-opacity">
+                        <button className="bg-[#002d67] text-white px-8 py-3.5 rounded-full font-bold text-[11px] uppercase tracking-widest flex items-center justify-center md:justify-start gap-2 hover:opacity-90 transition-opacity mx-auto md:mx-0">
                             GO TO CATALOG <ArrowRight className="w-3.5 h-3.5" />
                         </button>
                     </div>
-                    <div className="absolute right-0 top-0 bottom-0 w-[55%] flex justify-center items-center">
-                        <img src={toothbrushImg} alt="Oral-B" className="h-[85%] w-auto object-contain transform translate-x-4" />
+                    <div className="relative md:absolute right-0 top-0 bottom-0 w-full md:w-[55%] flex justify-center items-center h-[200px] md:h-auto">
+                        <img src={toothbrushImg} alt="Oral-B" className="h-full md:h-[85%] w-auto object-contain transform translate-x-0 md:translate-x-4 mix-blend-multiply" />
                     </div>
                 </div>
 
                 {/* Nivea Section - Slimmer high vertical */}
-                <div className="flex-[3] bg-[#ff6b81] rounded-[1.5rem] p-8 relative flex flex-col items-center overflow-hidden">
+                <div className="flex-[3] bg-[#ff6b81] rounded-[1.5rem] p-8 relative flex flex-col items-center overflow-hidden min-h-[320px]">
                     <div className="text-center relative z-20 w-full mb-4">
                         <p className="text-white/90 text-[13px] font-medium mb-1">Moisturizing face cream</p>
-                        <h2 className="text-[34px] font-black text-white leading-none">Nivea Care</h2>
+                        <h2 className="text-[28px] md:text-[34px] font-black text-white leading-none">Nivea Care</h2>
                     </div>
-                    <div className="flex-1 flex items-center justify-center w-full relative z-10">
-                        <img src={creamImg} alt="Nivea" className="h-[180px] w-auto object-contain" />
+                    <div className="flex-1 flex items-center justify-center w-full relative z-10 my-4 md:my-0">
+                        <img src={creamImg} alt="Nivea" className="h-[140px] md:h-[180px] w-auto object-contain" />
                     </div>
                     <div className="relative z-20 w-full flex justify-center mt-4">
                         <button className="bg-[#f25e4d] text-white px-8 py-3.5 rounded-full font-bold text-[11px] uppercase tracking-widest flex items-center gap-2 hover:opacity-90 transition-opacity shadow-lg">
@@ -90,9 +90,9 @@ const HeroSection = () => {
                 </div>
 
                 {/* Product Cards - Compact Column */}
-                <div className="w-[300px] flex flex-col gap-3">
+                <div className="w-full lg:w-[300px] flex flex-col sm:flex-row lg:flex-col gap-3">
                     {products.map((p, idx) => (
-                        <div key={idx} className="bg-white rounded-[1.5rem] p-3 flex items-center gap-3 hover:shadow-md transition-shadow border border-gray-50 h-[118px]">
+                        <div key={idx} className="bg-white rounded-[1.5rem] p-3 flex items-center gap-3 hover:shadow-md transition-shadow border border-gray-50 h-[118px] w-full">
                             <div className="w-20 h-20 bg-white flex items-center justify-center flex-shrink-0 relative">
                                 <div className="absolute -top-1 -right-1 z-10">
                                     <span className="bg-[#ff4d4d] text-white text-[9px] font-black px-1.5 py-0.5 rounded-sm uppercase">
@@ -123,8 +123,8 @@ const HeroSection = () => {
             </div>
 
             {/* Feature List - Slimmer Bar */}
-            <div className="flex items-center justify-between gap-2 py-6 px-10 bg-white rounded-[2rem] shadow-sm relative">
-                <div className="flex items-center gap-3 group">
+            <div className="flex items-center justify-start lg:justify-between gap-6 md:gap-2 py-6 px-6 md:px-10 bg-white rounded-[2rem] shadow-sm relative overflow-x-auto snap-x lg:overflow-visible no-scrollbar">
+                <div className="flex items-center gap-3 group flex-shrink-0 snap-start min-w-[200px] lg:min-w-0">
                     <div className="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center">
                         <Package className="w-6 h-6 text-green-200" />
                     </div>
@@ -133,7 +133,7 @@ const HeroSection = () => {
                         <p className="text-[10px] text-gray-400 font-medium leading-tight">Equipment, furniture...</p>
                     </div>
                 </div>
-                <div className="flex items-center gap-3 group">
+                <div className="flex items-center gap-3 group flex-shrink-0 snap-start min-w-[200px] lg:min-w-0">
                     <div className="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center">
                         <Truck className="w-6 h-6 text-red-100" />
                     </div>
@@ -142,7 +142,7 @@ const HeroSection = () => {
                         <p className="text-[10px] text-gray-400 font-medium leading-tight">To any point in Russia...</p>
                     </div>
                 </div>
-                <div className="flex items-center gap-3 group">
+                <div className="flex items-center gap-3 group flex-shrink-0 snap-start min-w-[200px] lg:min-w-0">
                     <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center">
                         <ShieldCheck className="w-6 h-6 text-blue-100" />
                     </div>
@@ -151,7 +151,7 @@ const HeroSection = () => {
                         <p className="text-[10px] text-gray-400 font-medium leading-tight">All products certified</p>
                     </div>
                 </div>
-                <div className="flex items-center gap-3 group">
+                <div className="flex items-center gap-3 group flex-shrink-0 snap-start min-w-[200px] lg:min-w-0">
                     <div className="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center">
                         <Tag className="w-6 h-6 text-orange-200" />
                     </div>
@@ -160,7 +160,7 @@ const HeroSection = () => {
                         <p className="text-[10px] text-gray-400 font-medium leading-tight">We try to keep prices lowest</p>
                     </div>
                 </div>
-                <div className="flex items-center gap-3 group">
+                <div className="flex items-center gap-3 group flex-shrink-0 snap-start min-w-[200px] lg:min-w-0">
                     <div className="w-12 h-12 rounded-xl bg-pink-50 flex items-center justify-center">
                         <MessageSquare className="w-6 h-6 text-pink-100" />
                     </div>
@@ -169,7 +169,7 @@ const HeroSection = () => {
                         <p className="text-[10px] text-gray-400 font-medium leading-tight">Real customer feedback</p>
                     </div>
                 </div>
-                <button className="absolute -right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#25d3af] text-white rounded-full flex items-center justify-center shadow-md">
+                <button className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#25d3af] text-white rounded-full items-center justify-center shadow-md">
                     <ChevronUp className="w-5 h-5" />
                 </button>
             </div>

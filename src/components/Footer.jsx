@@ -1,10 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Mail, Phone, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 
 const Footer = () => {
     return (
         <footer className="relative mt-32 font-sans">
-            {/* Overlapping 'Have Questions?' Card */}
             {/* Overlapping 'Have Questions?' Card */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-3rem)] max-w-[1440px] bg-white rounded-[20px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] p-8 md:p-10 z-10 flex flex-col gap-6">
 
@@ -27,7 +27,7 @@ const Footer = () => {
                     </div>
 
                     <button className="w-full h-14 bg-[#25d3af] text-white font-bold text-[12px] rounded-full hover:bg-[#1ebf9e] transition-colors shadow-lg shadow-[#25d3af]/20 uppercase tracking-widest">
-                        Ask A Question
+                        ASK A QUESTION
                     </button>
                 </div>
             </div>
@@ -54,7 +54,7 @@ const Footer = () => {
 
                     {/* Links Column 1 */}
                     <ul className="space-y-2.5 font-medium opacity-90">
-                        <li><a href="#" className="hover:opacity-100 hover:text-white transition-opacity flex items-center gap-2"><span className="opacity-40">—</span> About company</a></li>
+                        <li><Link to="/about" className="hover:opacity-100 hover:text-white transition-opacity flex items-center gap-2"><span className="opacity-40">—</span> About company</Link></li>
                         <li><a href="#" className="hover:opacity-100 hover:text-white transition-opacity flex items-center gap-2"><span className="opacity-40">—</span> Delivery</a></li>
                         <li><a href="#" className="hover:opacity-100 hover:text-white transition-opacity flex items-center gap-2"><span className="opacity-40">—</span> Pick up from pharmacy</a></li>
                         <li><a href="#" className="hover:opacity-100 hover:text-white transition-opacity flex items-center gap-2"><span className="opacity-40">—</span> Payment</a></li>
